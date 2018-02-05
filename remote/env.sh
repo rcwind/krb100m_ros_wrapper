@@ -1,7 +1,7 @@
 #!/bin/sh 
 # usage: source setup_network_pc.sh
 #IP_OF_REMOTE=`ifconfig eth0|grep 'inet add'|awk -F "[: ]" '{print $13}'`
-# 用户配置这个，使用的网卡设备名字
+# 用户配置这个，远程电脑使用的网卡设备名字，一般为eth0或者wlan0
 #NET_DEV=eth0
 NET_DEV=wlan0
 export IP_OF_REMOTE=`ifconfig $NET_DEV |awk -F\: '/inet / {print $2}'|awk '{print $1}'`
