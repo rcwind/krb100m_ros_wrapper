@@ -22,7 +22,7 @@ tmux kill-window -t :1 >>/dev/null || true
 tmux new-window  -k -t :1
 tmux select-window -t :1
 tmux send-keys -t :1 "source $this_script_dir/env.sh" Enter
-tmux send-keys -t :1 "roslaunch turtlebot_rviz_launchers view_navigation.launch" Enter
+tmux send-keys -t :1 "rosrun rviz rviz -d `rospack find krb100m_slam`/rviz/krb100m_slam.rviz" Enter
 
 tmux select-window -t :0
 
