@@ -6,7 +6,7 @@
 NET_DEV=wlan0
 export IP_OF_REMOTE=`ifconfig $NET_DEV |awk -F\: '/inet / {print $2}'|awk '{print $1}'`
 # 用户配置这个，krb100m机器人上的树莓派或orangepi的ip地址
-export IP_OF_SBC=192.168.1.104
+export IP_OF_SBC=172.27.35.4
 #------------orangepi用下面这个-------------------
 # 用户配置这个，krb100m机器人上的树莓派或orangepi的登录名
 # export USERNAME_IN_SBC=kidil
@@ -16,7 +16,7 @@ export IP_OF_SBC=192.168.1.104
 # 用户配置这个，krb100m机器人上的树莓派或orangepi的登录名
 export USERNAME_IN_SBC=kidil
 # 用户配置这个，krb100m机器人上笔记本ssh登录后提示的信息，也即终端的输出前缀，比如[krb100m@localhost ~]，可以使用通配符
-export LOGIN_PROMPT="orangepi@host:*"
+export LOGIN_PROMPT="kidil@kidil:*"
 #-------------------------------------------------
 
 export ROS_MASTER_URI=http://$IP_OF_SBC:11311

@@ -8,9 +8,9 @@ file=${var##*/}
 file_prefix=${file%%.*}
 source $this_script_dir/env.sh
 #make the minimal software been launched
-ssh -t $USERNAME_IN_KRB100M@$IP_OF_KRB100M "sh /home/$USERNAME_IN_KRB100M/krb100m_ros_wrapper/krb100m/kill_tmux_window.sh"
+ssh -t $USERNAME_IN_SBC@$IP_OF_SBC "sh /home/$USERNAME_IN_SBC/krb100m_ros_wrapper/krb100m/kill_tmux_window.sh"
 #launch_cmd="$this_script_dir/expect/$file_prefix.expect $IP_OF_krb100m $USERNAME_IN_krb100m $LOGIN_PROMPT"
-launch_cmd="$this_script_dir/krb100m.expect $IP_OF_KRB100M $USERNAME_IN_KRB100M $LOGIN_PROMPT $file_prefix 1"
+launch_cmd="$this_script_dir/krb100m.expect $IP_OF_SBC $USERNAME_IN_SBC $LOGIN_PROMPT $file_prefix 1"
 sleep 1
 tmux kill-window -t :0 >>/dev/null || true
 tmux new-window -k -t :0 "$launch_cmd"
