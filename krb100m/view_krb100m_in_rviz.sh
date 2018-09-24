@@ -1,1 +1,0 @@
-../remote/view_krb100m_in_rviz.sh

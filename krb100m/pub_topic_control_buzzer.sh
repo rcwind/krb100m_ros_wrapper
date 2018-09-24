@@ -1,1 +1,0 @@
-../remote/pub_topic_control_buzzer.sh

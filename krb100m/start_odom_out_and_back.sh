@@ -1,1 +1,0 @@
-../remote/start_odom_out_and_back.sh
